@@ -1,0 +1,116 @@
+@media (max-width:1240px) {
+    .section-four {grid-template-columns: 1fr;}
+    .box-left2 {display: none;}
+    .type3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .small {
+        flex-direction: column;
+        gap: 0;
+    }
+    .section-five {
+        grid-template-columns: 1fr;
+    }
+    .section {
+        justify-content: center;
+    }
+}
+@media (max-width:1000px) {
+    .header-section {
+        position: none;
+    }
+    header {
+        padding: 1.3rem 5%;
+    }
+}
+@media (max-width:1048px) {
+    .section-three {
+        grid-template-columns: 1fr;
+    }
+    .icon {
+        display: block;
+        color: black;
+    }
+    #check:checked~.icon #menu-icon {
+        display: none;
+    }
+    .icon #close-icon {
+        display: none;
+    }
+    #check:checked~.icon #close-icon {
+        display: block;
+    }
+    .navbar {
+        position:absolute;
+        background: rgba(0,0,0,.1);
+        backdrop-filter: blur(50px);
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        overflow: hidden;
+        transition: 0.5s ease;
+        flex-direction: column;
+    }
+    #check:checked~.navbar {
+        height: 23.7rem;
+    }
+    header nav a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-200px);
+        transition: 0.7s ease;
+        opacity: 0;
+    }
+    #check:checked~.navbar a {
+        transform: translateY(0);
+        transition-delay: calc(5s * var (--i));
+        opacity: 1;
+    }
+}
+@media (max-width: 868px) {
+    .section-two {
+        grid-template-columns:repeat(2,1fr)
+    }
+    .content-one {
+        max-width: 100%;
+    }
+    .line {
+        width: 6em;
+        height: 1rem;
+        margin-bottom: 20px;
+    }
+    .title {
+        font-size: 3.5em;
+        line-height: 1em;
+   }
+   .description {
+        width: 100%;
+   }
+   .box-right img {
+    display: none;
+   }
+   .box-right {height: 24rem;}
+   .type2 {
+    left: 0;
+    height: fit-content;
+   }
+}
+@media (max-width: 430px) {
+    .section-two {
+        grid-template-columns:repeat(1,1fr)
+    }
+    .box-right {height: 22rem;}
+    .type3 h2 {
+    text-align: center;
+    font-size: 4em;
+    line-height: 4rem;
+    margin-top: 20px;
+}
+}
